@@ -1,3 +1,7 @@
+// Тэст вводит слово в гугл, затем открывает по очереди каждый найденный элемент и ищет в нем 
+// текст - "openHAB 2 inside a Docker Container".  Метод - LocatorLink(); собирает основные ссылки "а" из результатов 
+// поиска в Гугл и показывает их в логах.
+
 import com.codeborne.selenide.*;
 import org.junit.Before;
 import org.junit.Rule;
