@@ -22,7 +22,7 @@ public class AriaPaglia {
         final String browserPropertyPath = "./src/main/resources/chromedriver";
 
     @Test
-    public void setup() throws InterruptedException {
+    public void findlocator() throws InterruptedException {
 
         System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tT %4$s %5$s%6$s%n");
 
@@ -49,13 +49,13 @@ public class AriaPaglia {
                    }
                }
            }
-           LocatorLink();                                                           // метод который собирает все ссылки
+           locatorlink();                                                           // метод который собирает все ссылки
            $(By.id("pnnext")).click(); Thread.sleep(700);                           // кликаем на кнопку "след страница"
        }
     }
 
     @Test
-    public void LocatorLink() throws InterruptedException {
+    public void locatorlink() throws InterruptedException {
         ElementsCollection link = $$("div.g>div>div.rc>h3.r>a");
         for (int i = 0; i<10; i++) {
             System.out.println(link.get(i).getAttribute("text"));
